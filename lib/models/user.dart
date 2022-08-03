@@ -6,7 +6,7 @@ class User {
   final String email;
   final String password;
   final String address;
-  final String type;  
+  final String type;
   final String token;
 
   User(
@@ -42,9 +42,13 @@ class User {
     );
   }
 
-  String toJson() => json.encode(toMap());
+  String toJson() {
+    return json.encode(toMap());
+  }
 
-  factory User.fromJson(String source) => User.fromMap(json.decode(source));
+  factory User.fromJson(String source) {
+    return User.fromMap(json.decode(source));
+  }
 
   //  *** IMORTNAT *** : Learn all about what this encode, decode, toJson, fromJson, toMap, Map all done ???????????????????????
 }
